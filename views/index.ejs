@@ -1,38 +1,39 @@
 <% include includes/header.ejs %>
 
+<div class="banner-section">
+  <div class="container">
+    <div class="hello-area">
+      <h1>
+        Start Shopping <span class="header-span">Now At The</span> Best Prices
+      </h1>
 
-
-    <div class="banner-section">
-        <div class="container">
-           <div class="hello-area">
-               <h1>Start  Shopping <span class="header-span">Now At The</span> Best Prices</h1>
-
-               <button class="btn btn-lg btn-primary "><a class="default" href="/products">Shop Now</a></button>
-           </div>
-        </div>
+      <button class="btn btn-lg btn-primary ">
+        <a class="default" href="/products">Shop Now</a>
+      </button>
     </div>
-    <div class="container">
-        <div class="section-title"><h3>New Products</h3></div>
-        <div class="center">
-            <div class="prods-section">
-                <% for (let product of products) {%>
-                    <div class="card">
-                        <div class="card-img">
-                            <img src="./uploads/products/<%= product.image %>"/>
-                        </div>
-                        <div class="card-content">
-                            <div class="card-title"><h3><%= product.title %></h3></div>
-                            <p><%= product.description %> </p>
-                            <div class="card-bottom">
-                                <h3>$<%= product.price %></h3>
-                                <p><button class="btn btn-primary">Buy</button></p>
-                            </div>
-                        </div>
-                    </div>
-                <%}%>
-
-            </div>
+  </div>
+</div>
+<div class="container">
+  <div class="section-title"><h3>New Products</h3></div>
+  <div class="center">
+    <div class="prods-section">
+      <% for (let product of products) {%>
+      <div class="card">
+        <div class="card-img">
+          <img src="./uploads/products/<%= product.image %>" />
         </div>
+        <div class="card-content">
+          <div class="card-title"><h3><%= product.title %></h3></div>
+          <p><%= product.description %></p>
+          <div class="card-bottom">
+            <h3>$<%= product.price %></h3>
+            <p><button class="btn btn-primary">Buy</button></p>
+          </div>
+        </div>
+      </div>
+      <%}%>
     </div>
+  </div>
+</div>
 
 <% include includes/footer.ejs %>

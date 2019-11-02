@@ -1,39 +1,57 @@
-<%- include('../includes/header.ejs')  %>
-<%- include('../includes/navbar.ejs')  %>
-<section class="section-top">
-    <div class="container">
-        <form class="form" action="/admin/add-product" method="post" enctype="multipart/form-data">
-            <h3 class="form-title">Add Product</h3>
+<%- include('../includes/header.ejs') %> <%- include('../includes/navbar.ejs')
+%>
 
-            <div class="form-group">
-                <input type="text" class="form-control" name="title" id="title" placeholder="Product Title">
-                <label for="title">Title</label>
-            </div>
+<div class="container">
+  <form
+    class="form"
+    action="/admin/add-product"
+    method="post"
+    enctype="multipart/form-data"
+  >
+    <h3 class="form-title">Add Product</h3>
 
-            <div class="form-group">
-                <input type="file" name="image" id="image">
-                <label for="image">Image</label>
-            </div>
-
-            <div class="form-group">
-                <textarea
-                        name="description"
-                        id="description"
-                        cols="30" rows="4"
-                        placeholder="Product Description"
-                        class="form-control"></textarea>
-                <label for="username">Description</label>
-            </div>
-
-            <div class="form-group">
-                <input type="text" class="form-control" name="price" id="price" placeholder="Product Price">
-                <label for="price">Email Address</label>
-            </div>
-
-
-
-            <button type="submit" class="btn btn-primary btn-lg">Add Product</button>
-        </form>
+    <div class="form-group">
+      <input
+        type="text"
+        class="form-control"
+        name="title"
+        id="title"
+        placeholder="Product Title"
+      />
+      <label for="title">Title</label>
     </div>
-</section>
-<%- include('../includes/footer.ejs')  %>
+
+    <div class="form-group">
+      <input type="file" name="image" id="image" />
+      <label for="image">Image</label>
+    </div>
+
+    <div class="form-group">
+      <textarea
+        name="description"
+        id="description"
+        cols="30"
+        rows="4"
+        placeholder="Product Description"
+        class="form-control"
+      ></textarea>
+      <label for="username">Description</label>
+    </div>
+
+    <div class="form-group">
+      <input
+        type="text"
+        class="form-control"
+        name="price"
+        id="price"
+        placeholder="Product Price"
+      />
+      <label for="price">Email Address</label>
+    </div>
+
+    <input type="hidden" name="_csrf" value="<%= csrfToken %> " />
+    <button type="submit" class="btn btn-primary btn-lg">Add Product</button>
+  </form>
+</div>
+
+<%- include('../includes/footer.ejs') %>

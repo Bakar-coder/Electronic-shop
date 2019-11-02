@@ -1,22 +1,21 @@
 <%- include('../includes/header.ejs')%>
-<section class="section-top">
 
-    <div class="container">
-        <div class="prods-section">
-            <% for (let product of products) {%>
-                <div class="card">
-                    <img  class="card-img" src="../uploads/products/<%= product.image %>"/>
-                    <div class="card-content">
-                        <div class="card-title"><h3><%= product.title %></h3></div>
-                        <p><%= product.description %></p>
-                        <div class="card-bottom">
-                            <h3>$-<%= product.price %></h3>
-                            <p><button class="btn btn-primary">Buy</button></p>
-                        </div>
-                    </div>
-                </div>
-            <%}%>
+<div class="container">
+  <div class="prods-section">
+    <% for (let product of products) {%>
+    <div class="card">
+      <img class="card-img" src="../uploads/products/<%= product.image %>" />
+      <div class="card-content">
+        <div class="card-title"><h3><%= product.title %></h3></div>
+        <p><%= product.description %></p>
+        <div class="card-bottom">
+          <h3>$-<%= product.price %></h3>
+          <p><%- include('../includes/add-to-cart.ejs', { product }) %></p>
         </div>
+      </div>
     </div>
-</section>
+    <%}%>
+  </div>
+</div>
+
 <%- include('../includes/footer.ejs')%>
