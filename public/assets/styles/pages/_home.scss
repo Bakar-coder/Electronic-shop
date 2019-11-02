@@ -1,0 +1,56 @@
+.banner-section {
+  height: 60vh;
+  width: 100%;
+  background-image: url("/assets/images/slides/3.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-bottom: 3px solid $lightColor;
+
+  & .header-span {
+    display: block;
+  }
+
+
+  & h1 {
+    padding-top: 8rem;
+    margin-bottom: 2rem;
+    color: $whiteColor;
+    font-size: 4.2rem;
+    font-weight: 300;
+  }
+}
+
+
+
+
+
+.container {
+
+    & .prods-section {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(27rem, 1fr));
+      grid-gap: 2rem 1rem;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    height: 100%;
+
+    & .hello-area {
+      display: flex;
+      height: 100%;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+
+      & h1 {
+        padding: 0;
+      }
+    }
+
+  }
+}

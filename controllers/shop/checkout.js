@@ -1,0 +1,3 @@
+exports.getCheckout = (req, res) => {
+
+};
