@@ -34,7 +34,6 @@ const sessionStore = new sessionStorage({
 });
 
 const csrfProtection = csrf();
-
 // import app routes
 const Home = require('./routes'),
   Users = require('./routes/users'),
