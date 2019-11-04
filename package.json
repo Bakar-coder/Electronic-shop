@@ -7,9 +7,6 @@
     "dev": "nodemon server.js",
     "start": "node server.js"
   },
-  "engines": {
-    "node": "12.2.0"
-  },
   "keywords": [],
   "author": "",
   "license": "ISC",
