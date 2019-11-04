@@ -8,7 +8,7 @@ router.route('/').get(async (req, res) => {
     .limit(4)
     .sort({ date: -1 });
   res.render('index', {
-    pageTitle: 'Online-Shop',
+    pageTitle: 'Electronic-Shop',
     isAuth,
     user,
     path,
