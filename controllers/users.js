@@ -118,14 +118,6 @@ exports.postLogin = async (req, res) => {
     return res.redirect('/users/login');
   }
 
-  user = {
-    id: user._id,
-    name: user.name,
-    username: user.username,
-    email: user.email,
-    avatar: user.avatar,
-    isAdmin: user.isAdmin
-  };
   req.session.user = user;
   req.session.isAuth = true;
   // req.session.cookie.samesite = true;

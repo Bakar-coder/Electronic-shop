@@ -1,20 +1,11 @@
-
-    <% if (success_msg && success_msg.length > 0) {%>
-        <% setTimeout(() => console.log('timer 3000ms'), 3000 ) %>
-        <div class="alert alert-success"><%= success_msg %></div>
-    <%}%>
-
-    <% if (error_msg && error_msg.length > 0) {%>
-        <div class="alert alert-danger"><%= error_msg %></div>
-    <%}%>
-
-    <% if (info_msg && info_msg.length > 0) {%>
-        <div class="alert alert-info"><%= info_msg %></div>
-    <%}%>
-
-    <% if (error && error.length > 0) {%>
-        <% setTimeout(() => console.log('timer 3000ms'), 3000 ) %>
-        <div class="alert alert-danger"><%= error %></div>
-    <%}%>
-
-
+<% if (success_msg && success_msg.length > 0) {%> <% setTimeout(() =>
+console.log('timer 3000ms'), 3000 ) %>
+<div class="alert alert-success"><%= success_msg %></div>
+<%}%> <% if (error_msg && error_msg.length > 0) {%>
+<div class="alert alert-danger"><%= error_msg %></div>
+<%}%> <% if (info_msg && info_msg.length > 0) {%>
+<div class="alert alert-info"><%= info_msg %></div>
+<%}%> <% if (error && error.length > 0) {%> <% setTimeout(() =>
+console.log('timer 3000ms'), 3000 ) %>
+<div class="alert alert-danger"><%= error %></div>
+<%}%>

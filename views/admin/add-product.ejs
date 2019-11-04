@@ -5,9 +5,10 @@
   <form
     class="form"
     action="/admin/add-product"
-    method="post"
+    method="POST"
     enctype="multipart/form-data"
   >
+    <input type="hidden" name="_csrf" value="<%= csrfToken %>" />
     <h3 class="form-title">Add Product</h3>
 
     <div class="form-group">
@@ -48,8 +49,6 @@
       />
       <label for="price">Email Address</label>
     </div>
-
-    <input type="hidden" name="_csrf" value="<%= csrfToken %> " />
     <button type="submit" class="btn btn-primary btn-lg">Add Product</button>
   </form>
 </div>

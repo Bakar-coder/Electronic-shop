@@ -1,8 +1,36 @@
 <%- include('../includes/header.ejs')%>
-
 <div class="container">
-  <div class="prods-section">
-    <h1>Cart</h1>
+  <div class="cart-section">
+    <% if (products.length > 0) { %>
+    <ul class="cart-item-list">
+      <% products.forEach(product => { %>
+      <li class="cart-item">
+        <h1><%= product.productId.title %></h1>
+        <h2>Quantity: <%= product.quantity %></h2>
+        <form action="/cart-delete-item" method="POST">
+          <input
+            type="hidden"
+            value="<%= product.productId._id %>"
+            name="productId"
+          />
+          <input type="hidden" name="_csrf" value="<%= csrfToken %>" />
+          <button class="btn danger" type="submit">Delete</button>
+        </form>
+      </li>
+      <% }) %>
+    </ul>
+    <hr />
+    <div class="centered">
+      <!--<form action="/create-order" method="POST">
+        <input type="hidden" name="_csrf" value="<%= csrfToken %>" />
+                  <button type="submit" class="btn">Order Now!</button>
+              </form>-->
+      <a class="btn" href="/checkout">Order Now!</a>
+    </div>
+
+    <% } else { %>
+    <h1>No Products in Cart!</h1>
+    <% } %>
   </div>
 </div>
 

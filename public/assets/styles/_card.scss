@@ -1,6 +1,5 @@
 .card {
   box-shadow: $boxShadow;
-  padding-bottom: 1rem;
   height: 45rem;
   background-color: $darkColor;
   transition: all .3s ease-in-out;
@@ -35,6 +34,9 @@
 
   &-bottom {
    display: flex;
+    width: 100%;
     justify-content: space-between;
+
+
   }
 }

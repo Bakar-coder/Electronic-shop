@@ -1,7 +1,7 @@
 .banner-section {
   height: 60vh;
   width: 100%;
-  background-image: url("/assets/images/slides/3.jpg");
+  background-image: url('/assets/images/slides/3.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -11,9 +11,8 @@
     display: block;
   }
 
-
   & h1 {
-    padding-top: 8rem;
+    padding-top: 6rem;
     margin-bottom: 2rem;
     color: $whiteColor;
     font-size: 4.2rem;
@@ -21,18 +20,12 @@
   }
 }
 
-
-
-
-
 .container {
-
-    & .prods-section {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(27rem, 1fr));
-      grid-gap: 2rem 1rem;
-    }
-
+  & .prods-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(27rem, 1fr));
+    grid-gap: 2rem 1rem;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -51,6 +44,5 @@
         padding: 0;
       }
     }
-
   }
 }

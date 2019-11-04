@@ -9,6 +9,7 @@ const mongoose = require('mongoose'),
     password: { type: String, required: true, min: 8, max: 16 },
     password2: String,
     avatar: String,
+    _csrf: String,
     isAdmin: { type: Boolean, default: false },
     resetToken: String,
     resetTokenExpiration: Date,
@@ -76,7 +77,8 @@ const validateRegister = user => {
       .min(8)
       .max(16),
     password2: Joi.string(),
-    isAdmin: Joi.boolean()
+    isAdmin: Joi.boolean(),
+    _csrf: Joi.string()
   };
 
   return Joi.validate(user, schema);
@@ -87,6 +89,7 @@ const validateLogin = user => {
     email: Joi.string()
       .required()
       .email(),
+    _csrf: Joi.string(),
     password: Joi.string().required()
   };
 
