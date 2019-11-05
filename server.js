@@ -21,6 +21,11 @@ if (!config.get('jwtPrivateKey')) {
   process.exit(1);
 }
 
+if (process.env.NODE_ENV === 'production' && !config.get('database')) {
+  console.log('Database Connection Failed!');
+  process.exit(1);
+}
+
 // create a log stream file
 const accessLogStream = fs.createWriteStream(
   path.join(__dirname, 'access.log'),
