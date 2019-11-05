@@ -1,4 +1,5 @@
 {
   "jwtPrivateKey": "",
-  "database": ""
+  "database": "",
+  "NODE_ENV": ""
 }
