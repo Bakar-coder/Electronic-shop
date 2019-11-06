@@ -1,3 +1,4 @@
+require('express-async-errors');
 const express = require('express'),
   config = require('config'),
   csrf = require('csurf'),
@@ -21,8 +22,8 @@ if (!config.get('jwtPrivateKey')) {
   process.exit(1);
 }
 
-if (process.env.NODE_ENV === 'production' && !config.get('database')) {
-  console.log('Database Connection Failed!');
+if (!config.get('database')) {
+  console.log('Database connection failed!');
   process.exit(1);
 }
 
